@@ -1,0 +1,92 @@
+doctype html
+html
+  head
+    title Around 120 minutes with CSS 
+    meta(charset='utf-8')
+    meta(name='author', content=' Marek Matczak, Janusz Rygał, Paweł Kamiński, Bartek Pietrowski, Tomek Szewców')
+    meta(name='description', content='RWC Traning')
+    meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
+   
+
+ 
+    link(href='reveal.js-3.3.0/css/reveal.css', rel='stylesheet')
+    link(href='reveal.js-3.3.0/css/theme/black.css', rel='stylesheet')
+    link(href='common/css/common.css', rel='stylesheet')
+    link(href='style.css', rel='stylesheet')
+    <!-- Theme used for syntax highlighting of code -->
+    link(href='reveal.js-3.3.0/lib/css/zenburn.css', rel='stylesheet')
+    //- Printing and PDF exports -->
+    script.
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.3.0/css/print/pdf.css' : 'reveal.js-3.3.0/css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    
+   
+ 
+
+  body
+    .reveal
+      .slides        
+        include ./slides/title.pug
+        include ./slides/agenda.pug        
+        include ./slides/syntax/syntax01.pug        
+        include ./slides/syntax/syntax02.pug        
+        include ./slides/syntax/selectors01.pug        
+        include ./slides/syntax/selectors02.pug               
+        include ./slides/syntax/properties01.pug
+        include ./slides/syntax/properties02.pug
+        include ./slides/syntax/demo01.pug
+        include ./slides/syntax/priority01.pug        
+        include ./slides/syntax/priority02.pug    
+        include ./slides/syntax/demo02.pug
+        include ./slides/positioning/box.pug        
+        include ./slides/positioning/demobox.pug
+        include ./slides/positioning/blockvsinline01.pug                
+        include ./slides/positioning/blockvsinline02.pug                
+        include ./slides/positioning/blockvsinline03.pug                
+        include ./slides/positioning/demo03.pug
+        include ./slides/positioning/float01.pug
+        include ./slides/positioning/demo04.pug
+        include ./slides/positioning/positioning01.pug
+        include ./slides/positioning/positioning02.pug
+        include ./slides/positioning/positioning03.pug
+        include ./slides/positioning/positioning04.pug
+        include ./slides/positioning/demo05.pug               
+        include ./slides/positioning/flex.pug  
+        include ./slides/positioning/demo06.pug       
+        // include ./slides/grid.pug                  
+        // include ./slides/extras/less.pug
+        // include ./slides/extras/sass.pug
+        // include ./slides/extras/programming.pug
+        include ./slides/extras/moretolearn.pug        
+        include ./slides/extras/more01.pug
+        include ./slides/extras/more02.pug
+        include ./slides/extras/more03.pug
+        include ./slides/extras/extras.pug
+                
+     
+    script(src='reveal.js-3.3.0/lib/js/head.min.js')
+    script(src='reveal.js-3.3.0/js/reveal.js')
+
+    script.
+      Reveal.initialize({
+       // controls: true,
+      //  progress: true,
+        history: true,
+      //  center: true,
+      //  rollingLinks: true,
+     //   transition: "convex",
+        //- width: "90%",
+        //- height: 1.0,
+        dependencies: [
+          // Syntax highlight for <code> elements
+            {src: 'reveal.js-3.3.0/plugin/markdown/marked.js'},
+            {src: 'reveal.js-3.3.0/plugin/markdown/markdown.js'},
+            {src: 'reveal.js-3.3.0/plugin/notes/notes.js', async: true},
+            { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },         
+        ]
+      });
+     
+

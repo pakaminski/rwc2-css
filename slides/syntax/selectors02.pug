@@ -1,0 +1,37 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'selectors02'
+
+block title
+        | selectors
+block content       
+       table
+                thead
+                        tr
+                        th(style="width: 250px;") Selector
+                        th Selected element(s)
+                tbody
+                        tr
+                        td.code *
+                        td All elements
+                        tr
+                        td.code div &gt; p
+                        td All &lt;p&gt; elements where the direct parent is a &lt;div&gt; element
+                        tr
+                        td.code div + p
+                        td All &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements
+                        tr
+                        td.code p:first-child
+                        td Selects every &lt;p&gt; element that is the first child of its parent
+                        tr
+                        td.code p::first-line
+                        td Selects first line od every &lt;p&gt; element
+     
+       ul
+         li.nobullet
+           a(href="http://www.w3schools.com/cssref/css_selectors.asp", target="_blank")   Selectors 
+         li.nobullet
+           a(href="https://www.w3schools.com/css/css_pseudo_classes.asp", target="_blank")   Pseudo Classes
+         li.nobullet
+           a(href="https://www.w3schools.com/css/css_pseudo_elements.asp", target="_blank")   Pseudo Elements

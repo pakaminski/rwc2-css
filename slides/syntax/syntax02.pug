@@ -1,0 +1,22 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'syntax02'  
+  -var transition= "none"
+
+block title
+        | syntax
+block content       
+        pre
+                 code(css, data-trim)
+                        |p, div {
+                        |   background: red;
+                        |   font-weight: bold;
+                        |   color: blue
+                        |}
+                        |&nbsp;
+                        |p {
+                        |   font-style: italic
+                        |}
+                        |&nbsp;
+                        | /* Css comment */

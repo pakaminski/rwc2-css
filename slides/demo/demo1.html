@@ -1,0 +1,68 @@
+<style>
+p{
+  font-size:25px;  
+}
+
+div {
+   border: 3px solid green
+}
+
+#contentA{
+  width:300px
+}
+#contentB{
+  width:350px
+}
+
+.bg-grey{
+  background-color: grey;
+}
+
+#contentA p{
+  font-style: italic
+}
+
+p.bg-grey{
+   text-transform: uppercase;
+}
+
+.bg-grey.prio1{
+  color:#eee;
+}
+
+#contentA .prio1{
+  text-decoration: underline;
+}
+
+#content p::first-line{
+  color:red
+}
+
+div > p{
+  font-size: 20px
+}
+p + p{
+  margin-left:30px  
+}
+
+#contentA p::first-line{
+  color:red
+}
+
+#contentA p:first-letter{
+  font-size: 40px
+}
+
+</style>
+
+<div id="container">
+  <h1>Demo 1</h1>
+  <div id="contentA">
+    <p>in a nisi. Nunc sagittis rhoncus mollis. Sed at magna quis elit placerat molestie. Nulla sit </p>    
+    <p class="bg-grey prio1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel ipsum vel nulla rutrum rutrum   </p>  
+  </div>
+  
+  <div id="contentB" class="bg-grey">
+      amet ultricies arcu. Praesent dictum posuere velit id auctor. Integer aliquet diam quis consequat     
+  </div>
+</div>

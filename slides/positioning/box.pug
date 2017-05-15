@@ -1,0 +1,11 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'box'
+
+block title
+        | Box model
+block content       
+        img.zoomable.center(src="img/box.gif")
+        p
+          strong real-size = margin + border + padding + size

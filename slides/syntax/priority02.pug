@@ -1,0 +1,22 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'priority02'
+
+block title
+        | priority (S-I-C-E)
+block content       
+        table
+                tbody
+                        tr
+                        td.bold Source
+                        td 2 - Inline <br> 1 - <span style="color:#71e9f4">&lt;style&gt;&lt;/style&gt;</span> tag <br> 0 - External file
+                        tr
+                        td.bold Ids
+                        td Number of identifiers in selector
+                        tr
+                        td.bold Classes
+                        td Number of classes in selector
+                        tr
+                        td.bold Elements
+                        td Number of elements in selector

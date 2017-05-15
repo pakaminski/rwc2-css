@@ -1,0 +1,12 @@
+.reveal section img.logo{
+  box-shadow: none;
+  border-color: #222;
+}
+
+.reveal section table{
+   font-size: 32px;
+}
+
+.reveal section li.nobullet{
+   list-style:none;
+}

@@ -1,0 +1,34 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'properties02'
+
+block title
+        | properties
+block content       
+      table
+        thead
+                tr
+                th Properties
+                        th Example values
+        tbody
+                tr
+                td.code -webkit-transform
+                td  rotate(7deg)
+                tr
+                td.code overflow-x
+                td hidden
+                tr
+                td.code list-style-image
+                td url('sqpurple.gif');
+                tr
+                td.code visiblility
+                td false
+                tr
+                td.code cursor
+                td pointer
+                tr
+                td.code z-index
+                td -99
+      p
+                a(href="http://www.w3schools.com/cssref", target="_blank")   W3C properites

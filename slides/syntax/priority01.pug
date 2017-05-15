@@ -1,0 +1,27 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'priority01'
+
+block title
+        | Applying styles 
+block content                                     
+            pre
+              code(css, data-trim)  
+                | //external script             
+                | <link href="style.css" rel="stylesheet">
+      
+            pre
+              code(css)
+                | //style tag     
+                |  &lt;style&gt;
+                |   p{
+                |    font-size:25px;
+                |    font-family:tahoma;                  
+                |   }
+                | &lt;/style&gt;         
+            pre
+              code
+                |  //inline styles
+                |  &lt;p  style="font-size:12px"  &gt; 
+                
