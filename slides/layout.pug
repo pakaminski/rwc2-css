@@ -1,8 +1,10 @@
--var transition= "slide"
+-var transition= 'slide'
+-var type= 'normal'
 block vars
 
-section(id= id, data-transition=transition)
+section(id= id, data-transition=transition, data-state=type)
   h2
     block title
   body
     block content  
+

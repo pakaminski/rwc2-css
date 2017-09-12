@@ -26,11 +26,11 @@
   <body>
     <div class="reveal">
       <div class="slides">       
-        <section id="title" data-transition="slide">
+        <section id="title" data-transition="slide" data-state="normal">
           <h2>Around 120 minutes with CSS</h2>
           <body><img class="logo" src="img/css-logo.png"></body>
         </section>
-        <section id="agenda" data-transition="slide">
+        <section id="agenda" data-transition="slide" data-state="normal">
           <h2>Agenda</h2>
           <body>
             <table> 
@@ -62,7 +62,7 @@
             </table>
           </body>
         </section>
-        <section id="syntax01" data-transition="slide none">
+        <section id="syntax01" data-transition="slide none" data-state="normal">
           <h2>syntax</h2>
           <body>
             <pre><code css data-trim>&lt;selector1&gt;, &lt;selector2&gt; {
@@ -78,7 +78,7 @@
 /* Css comment */</code></pre>
           </body>
         </section>
-        <section id="syntax02" data-transition="none">
+        <section id="syntax02" data-transition="none" data-state="normal">
           <h2>syntax</h2>
           <body>
             <pre><code css data-trim>p, div {
@@ -94,7 +94,7 @@ p {
 /* Css comment */</code></pre>
           </body>
         </section>
-        <section id="selectors01" data-transition="slide">
+        <section id="selectors01" data-transition="slide" data-state="normal">
           <h2>selectors</h2>
           <body>
             <table>
@@ -129,7 +129,7 @@ p {
             </table>
           </body>
         </section>
-        <section id="selectors02" data-transition="slide">
+        <section id="selectors02" data-transition="slide" data-state="normal">
           <h2>selectors</h2>
           <body>
             <table>
@@ -163,7 +163,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="properties01" data-transition="slide">
+        <section id="properties01" data-transition="slide" data-state="normal">
           <h2>properties</h2>
           <body>
             <table>
@@ -201,7 +201,7 @@ p {
             </table>
           </body>
         </section>
-        <section id="properties02" data-transition="slide">
+        <section id="properties02" data-transition="slide" data-state="normal">
           <h2>properties</h2>
           <body>
             <table>
@@ -235,19 +235,27 @@ p {
             <p><a href="http://www.w3schools.com/cssref" target="_blank">  W3C properites</a></p>
           </body>
         </section>
-        <section id="demo01" data-transition="slide">
+        <section id="demo01" data-transition="slide" data-state="normal">
           <h2>Demo Syntax</h2>
           <body><a href="http://scratchpad.io/ethereal-passenger-6873" target="_blank">Demo</a></body>
         </section>
-        <section id="exercise1" data-transition="slide">
+        <section id="exercise1" data-transition="slide" data-state="jsbin">
           <h2>Exercise 1</h2>
-          <body>TBC</body>
+          <body>
+            <iframe class="jsbin" data-src="http://jsbin.com/meqidem/1/edit?html,css" src="http://jsbin.com/meqidem/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/sefufos/2/edit?output" src="http://jsbin.com/sefufos/2/edit?output"> </iframe>
+            <p class="small">In Chrome click allow insecure content to see exercise</p>
+          </body>
         </section>
-        <section id="exercise2" data-transition="slide">
+        <section id="exercise2" data-transition="slide" data-state="normal">
           <h2>Exercise 2</h2>
-          <body>TBC</body>
+          <body>
+            <iframe class="jsbin" data-src="http://jsbin.com/bipaqe/1/edit?html,css" src="http://jsbin.com/bipaqe/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/rewihig/2/edit?output" src="http://jsbin.com/rewihig/2/edit?output"> </iframe>
+            <p class="small">In Chrome click allow insecure content to see exercise</p>
+          </body>
         </section>
-        <section id="priority01" data-transition="slide">
+        <section id="priority01" data-transition="slide" data-state="normal">
           <h2>Applying styles </h2>
           <body>
             <pre><code css data-trim> //external script             
@@ -263,7 +271,7 @@ p {
  &lt;p  style="font-size:12px"  &gt; </code></pre>
           </body>
         </section>
-        <section id="priority02" data-transition="slide">
+        <section id="priority02" data-transition="slide" data-state="normal">
           <h2>priority (S-I-C-E)</h2>
           <body>
             <table>
@@ -284,21 +292,21 @@ p {
             </table>
           </body>
         </section>
-        <section id="demo02" data-transition="slide">
+        <section id="demo02" data-transition="slide" data-state="normal">
           <h2>Demo Priority</h2>
           <body><a href="http://scratchpad.io/relieved-magic-890" target="_blank">Demo</a></body>
         </section>
-        <section id="box" data-transition="slide">
+        <section id="box" data-transition="slide" data-state="normal">
           <h2>Box model</h2>
           <body><img class="zoomable center" src="img/box.gif">
             <p><strong>real-size = margin + border + padding + size</strong></p>
           </body>
         </section>
-        <section id="demobox" data-transition="slide">
+        <section id="demobox" data-transition="slide" data-state="normal">
           <h2>Demo Box model</h2>
           <body><a href="http://scratchpad.io/tasteful-selection-1102" target="_blank">Demo</a></body>
         </section>
-        <section id="blockvsinline01" data-transition="slide">
+        <section id="blockvsinline01" data-transition="slide" data-state="normal">
           <h2>block vs inline</h2>
           <body>
             <h3>display: block</h3>
@@ -309,7 +317,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="blockvsinline02" data-transition="slide">
+        <section id="blockvsinline02" data-transition="slide" data-state="normal">
           <h2>block vs inline</h2>
           <body>
             <h3>display: inline</h3>
@@ -320,7 +328,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="blockvsinline03" data-transition="slide">
+        <section id="blockvsinline03" data-transition="slide" data-state="normal">
           <h2>block vs inline</h2>
           <body>
             <h3>display: inline-block</h3>
@@ -331,11 +339,11 @@ p {
             </ul>
           </body>
         </section>
-        <section id="demo03" data-transition="slide">
+        <section id="demo03" data-transition="slide" data-state="normal">
           <h2>Demo Block vs inline </h2>
           <body><a href="http://scratchpad.io/cute-girl-6528" target="_blank">Demo</a></body>
         </section>
-        <section id="float01" data-transition="slide">
+        <section id="float01" data-transition="slide" data-state="normal">
           <h2>Float</h2>
           <body>
             <ul>
@@ -345,15 +353,19 @@ p {
             </ul>
           </body>
         </section>
-        <section id="demo04" data-transition="slide">
+        <section id="demo04" data-transition="slide" data-state="normal">
           <h2>Demo Float</h2>
           <body><a href="http://scratchpad.io/volatile-army-7723" target="_blank">Demo</a></body>
         </section>
-        <section id="exercise3" data-transition="slide">
+        <section id="exercise3" data-transition="slide" data-state="normal">
           <h2> Exercise 3</h2>
-          <body>TBC</body>
+          <body>
+            <iframe class="jsbin" data-src="http://jsbin.com/jaxobe/1/edit?html,css" src="http://jsbin.com/jaxobe/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/pakisa/2/edit?output" src="http://jsbin.com/pakisa/2/edit?output"> </iframe>
+            <p class="small">In Chrome click allow insecure content to see exercise</p>
+          </body>
         </section>
-        <section id="positioning01" data-transition="slide">
+        <section id="positioning01" data-transition="slide" data-state="normal">
           <h2>Position:static</h2>
           <body>
             <ul>
@@ -362,7 +374,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="positioning02" data-transition="slide">
+        <section id="positioning02" data-transition="slide" data-state="normal">
           <h2>Position:relative</h2>
           <body>
             <ul>
@@ -372,7 +384,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="positioning03" data-transition="slide">
+        <section id="positioning03" data-transition="slide" data-state="normal">
           <h2> Position:absolute</h2>
           <body>
             <ul>
@@ -382,7 +394,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="positioning04" data-transition="slide">
+        <section id="positioning04" data-transition="slide" data-state="normal">
           <h2>Position: fixed</h2>
           <body>
             <ul>
@@ -391,15 +403,19 @@ p {
             </ul>
           </body>
         </section>
-        <section id="demo05" data-transition="slide">
+        <section id="demo05" data-transition="slide" data-state="normal">
           <h2>Demo Positioniong</h2>
           <body><a href="http://scratchpad.io/enormous-toes-6101" target="_blank">Demo</a></body>
         </section>
-        <section id="exercise4" data-transition="slide">
+        <section id="exercise4" data-transition="slide" data-state="normal">
           <h2>Exercise 4</h2>
-          <body>TBC</body>
+          <body>
+            <iframe class="jsbin" data-src="http://jsbin.com/gemovi/1/edit?html,css" src="http://jsbin.com/gemovi/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/jafuzo/2/edit?output" src="http://jsbin.com/jafuzo/2/edit?output"> </iframe>
+            <p class="small">In Chrome click allow insecure content to see exercise</p>
+          </body>
         </section>
-        <section id="flexbox" data-transition="slide">
+        <section id="flexbox" data-transition="slide" data-state="normal">
           <h2>Flexbox</h2>
           <body>
             <ul>
@@ -423,7 +439,7 @@ p {
         <!-- include ./slides/extras/less.pug-->
         <!-- include ./slides/extras/sass.pug-->
         <!-- include ./slides/extras/programming.pug-->
-        <section id="moretolearn" data-transition="slide">
+        <section id="moretolearn" data-transition="slide" data-state="normal">
           <h2>what we have missed</h2>
           <body>
             <ul> 
@@ -435,7 +451,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="more01" data-transition="slide">
+        <section id="more01" data-transition="slide" data-state="normal">
           <h2>Websites</h2>
           <body>
             <ul>
@@ -447,7 +463,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="more02" data-transition="slide">
+        <section id="more02" data-transition="slide" data-state="normal">
           <h2>People</h2>
           <body>
             <ul>
@@ -457,7 +473,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="more02" data-transition="slide">
+        <section id="more02" data-transition="slide" data-state="normal">
           <h2>Watch Conferences</h2>
           <body>
             <ul>
@@ -467,7 +483,7 @@ p {
             </ul>
           </body>
         </section>
-        <section id="extras" data-transition="slide">
+        <section id="extras" data-transition="slide" data-state="normal">
           <h2>extras</h2>
           <body>
             <ul>
@@ -501,6 +517,10 @@ p {
              { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },         
          ]
        });
+       Reveal.addEventListener( 'jsbin', function() {
+       
+             console.log(this);
+       }, false );
     </script>
   </body>
 </html>
