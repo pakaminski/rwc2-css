@@ -242,16 +242,16 @@ p {
         <section id="exercise1" data-transition="slide" data-state="jsbin">
           <h2>Exercise 1</h2>
           <body>
-            <iframe class="jsbin" data-src="http://jsbin.com/meqidem/1/edit?html,css" src="http://jsbin.com/meqidem/1/edit?html,css"></iframe>
-            <iframe class="jsbinresult" data-src="http://jsbin.com/sefufos/2/edit?output" src="http://jsbin.com/sefufos/2/edit?output"> </iframe>
+            <iframe class="jsbin" data-src="http://jsbin.com/meqidem/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/sefufos/2/edit?output"> </iframe>
             <p class="small">In Chrome click allow insecure content to see exercise</p>
           </body>
         </section>
-        <section id="exercise2" data-transition="slide" data-state="normal">
+        <section id="exercise2" data-transition="slide" data-state="jsbin">
           <h2>Exercise 2</h2>
           <body>
-            <iframe class="jsbin" data-src="http://jsbin.com/bipaqe/1/edit?html,css" src="http://jsbin.com/bipaqe/1/edit?html,css"></iframe>
-            <iframe class="jsbinresult" data-src="http://jsbin.com/rewihig/2/edit?output" src="http://jsbin.com/rewihig/2/edit?output"> </iframe>
+            <iframe class="jsbin" data-src="http://jsbin.com/bipaqe/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/rewihig/2/edit?output"> </iframe>
             <p class="small">In Chrome click allow insecure content to see exercise</p>
           </body>
         </section>
@@ -357,11 +357,11 @@ p {
           <h2>Demo Float</h2>
           <body><a href="http://scratchpad.io/volatile-army-7723" target="_blank">Demo</a></body>
         </section>
-        <section id="exercise3" data-transition="slide" data-state="normal">
+        <section id="exercise3" data-transition="slide" data-state="jsbin">
           <h2> Exercise 3</h2>
           <body>
-            <iframe class="jsbin" data-src="http://jsbin.com/jaxobe/1/edit?html,css" src="http://jsbin.com/jaxobe/1/edit?html,css"></iframe>
-            <iframe class="jsbinresult" data-src="http://jsbin.com/pakisa/2/edit?output" src="http://jsbin.com/pakisa/2/edit?output"> </iframe>
+            <iframe class="jsbin" data-src="http://jsbin.com/jaxobe/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/pakisa/2/edit?output"> </iframe>
             <p class="small">In Chrome click allow insecure content to see exercise</p>
           </body>
         </section>
@@ -407,11 +407,11 @@ p {
           <h2>Demo Positioniong</h2>
           <body><a href="http://scratchpad.io/enormous-toes-6101" target="_blank">Demo</a></body>
         </section>
-        <section id="exercise4" data-transition="slide" data-state="normal">
+        <section id="exercise4" data-transition="slide" data-state="jsbin">
           <h2>Exercise 4</h2>
           <body>
-            <iframe class="jsbin" data-src="http://jsbin.com/gemovi/1/edit?html,css" src="http://jsbin.com/gemovi/1/edit?html,css"></iframe>
-            <iframe class="jsbinresult" data-src="http://jsbin.com/jafuzo/2/edit?output" src="http://jsbin.com/jafuzo/2/edit?output"> </iframe>
+            <iframe class="jsbin" data-src="http://jsbin.com/gemovi/1/edit?html,css"></iframe>
+            <iframe class="jsbinresult" data-src="http://jsbin.com/jafuzo/2/edit?output"> </iframe>
             <p class="small">In Chrome click allow insecure content to see exercise</p>
           </body>
         </section>
@@ -518,8 +518,17 @@ p {
          ]
        });
        Reveal.addEventListener( 'jsbin', function() {
-       
-             console.log(this);
+             var iframes  = document.querySelectorAll(".present iframe"),  
+             iframeSrc = iframes[0].data("src");
+             iframes[0].attr("src",iframeSrc);
+      
+      
+             setTimeout(function(){                
+                 iframeSrc = iframes[1].data("src");
+                 iframes[1].attr("src",iframeSrc);
+             }, 2000);
+      
+             
        }, false );
     </script>
   </body>

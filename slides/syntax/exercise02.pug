@@ -2,12 +2,13 @@ extends ../layout.pug
 
 block vars
   -var id = 'exercise2'
+  -var type= "jsbin"
 
 block title
         | Exercise 2
 block content       
-        iframe.jsbin(data-src="http://jsbin.com/bipaqe/1/edit?html,css" src="http://jsbin.com/bipaqe/1/edit?html,css")
+        iframe.jsbin(data-src="http://jsbin.com/bipaqe/1/edit?html,css" )
 
-        iframe.jsbinresult(data-src="http://jsbin.com/rewihig/2/edit?output" src="http://jsbin.com/rewihig/2/edit?output") 
+        iframe.jsbinresult(data-src="http://jsbin.com/rewihig/2/edit?output" ) 
         p.small
              | In Chrome click allow insecure content to see exercise

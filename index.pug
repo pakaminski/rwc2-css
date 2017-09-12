@@ -93,8 +93,17 @@ html
         ]
       });
       Reveal.addEventListener( 'jsbin', function() {
-      
-            console.log(this);
+            var iframes  = document.querySelectorAll(".present iframe"),  
+            iframeSrc = iframes[0].data("src");
+            iframes[0].attr("src",iframeSrc);
+
+
+            setTimeout(function(){                
+                iframeSrc = iframes[1].data("src");
+                iframes[1].attr("src",iframeSrc);
+            }, 2000);
+
+            
       }, false );
      
 
