@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Around 120 minutes with CSS 
+    title Around 120 minutes with CSS
     meta(charset='utf-8')
     meta(name='author', content=' Marek Matczak, Janusz Rygał, Paweł Kamiński, Bartek Pietrowski, Tomek Szewców')
     meta(name='description', content='RWC Traning')
@@ -38,6 +38,8 @@ html
         include ./slides/syntax/properties01.pug
         include ./slides/syntax/properties02.pug
         include ./slides/syntax/demo01.pug
+        include ./slides/syntax/exercise01.pug
+        include ./slides/syntax/exercise02.pug
         include ./slides/syntax/priority01.pug        
         include ./slides/syntax/priority02.pug    
         include ./slides/syntax/demo02.pug
@@ -49,13 +51,15 @@ html
         include ./slides/positioning/demo03.pug
         include ./slides/positioning/float01.pug
         include ./slides/positioning/demo04.pug
+        include ./slides/positioning/exercise03.pug
         include ./slides/positioning/positioning01.pug
         include ./slides/positioning/positioning02.pug
         include ./slides/positioning/positioning03.pug
         include ./slides/positioning/positioning04.pug
-        include ./slides/positioning/demo05.pug               
+        include ./slides/positioning/demo05.pug    
+        include ./slides/positioning/exercise04.pug           
         include ./slides/positioning/flex.pug  
-        include ./slides/positioning/demo06.pug       
+        // include ./slides/positioning/demo06.pug       
         // include ./slides/grid.pug                  
         // include ./slides/extras/less.pug
         // include ./slides/extras/sass.pug
@@ -88,5 +92,18 @@ html
             { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },         
         ]
       });
+      Reveal.addEventListener( 'jsbin', function() {
+            var iframes  = document.querySelectorAll(".present iframe"),  
+            iframeSrc = iframes[0].data("src");
+            iframes[0].attr("src",iframeSrc);
+
+
+            setTimeout(function(){                
+                iframeSrc = iframes[1].data("src");
+                iframes[1].attr("src",iframeSrc);
+            }, 2000);
+
+            
+      }, false );
      
 

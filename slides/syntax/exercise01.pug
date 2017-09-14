@@ -1,0 +1,14 @@
+extends ../layout.pug
+
+block vars
+  -var id = 'exercise1'
+  -var type= "jsbin"
+
+block title
+        | Exercise 1
+block content       
+        iframe.jsbin(data-src="http://jsbin.com/meqidem/1/edit?html,css" )
+
+        iframe.jsbinresult(data-src="http://jsbin.com/sefufos/2/edit?output" ) 
+        p.small
+             | In Chrome click "Load unsafe scripts" to see exercise

@@ -5,12 +5,18 @@
   "angular-cli": {},
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server -p4200",
-    "serve": "node node_modules/reload/bin/reload -b -p 4200"
+    "serve": "node node_modules/reload/bin/reload -b -p 4200",
+    "pug": "node_modules/pug-cli/index.js -P index.pug",
+"watch" : "node_modules/watch-run/bin/watch -p 'slides/*, slides/**/* ,index.pug' node \"node_modules/pug-cli/index.js -P index.pug\""
+
   },
   "private": true,
   "dependencies": {},
   "devDependencies": {
     "http-server": "^0.9.0",
-    "reload": "^1.1.2"
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "reload": "^1.1.2",
+    "watch-run": "^1.2.5"
   }
 }

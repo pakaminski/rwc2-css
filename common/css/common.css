@@ -50,3 +50,21 @@ html .reveal section div.quote-source {
     text-align: right;
     font-size: 30px;
 }
+
+iframe.jsbinresult {
+    margin-bottom: 10px;
+    min-height: 100px !important;
+}
+
+iframe.jsbin {
+    margin-bottom: 10px;
+    min-height: 350px !important;
+}
+
+iframe {
+    width: 100%;
+}
+
+html .reveal p.small{
+    font-size : 0.5em; 
+}
