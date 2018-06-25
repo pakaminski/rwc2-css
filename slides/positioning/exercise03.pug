@@ -4,11 +4,13 @@ block vars
   -var id = 'exercise3'
   -var type= "jsbin"
 
-block title
-        |  Exercise 3
-block content       
-        iframe.jsbin(data-src="http://jsbin.com/jaxobe/1/edit?html,css" )
 
-        iframe.jsbinresult(data-src="http://jsbin.com/pakisa/2/edit?output" ) 
-        p.small
-             | In Chrome click "Load unsafe scripts" to see exercise
+block title
+       a(href="http://jsbin.com/jaxobe/1/edit?html,css" target="_blank")
+         | Exercise 3
+block content       
+                
+        a(href="http://jsbin.com/pakisa/2/edit?output" target="_blank")
+          img.logo(src='img/excercise3.png')        
+        
+        
