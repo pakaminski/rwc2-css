@@ -7,14 +7,17 @@ html
     meta(name='description', content='RWC Traning')
     meta(name="viewport",content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui")
    
+    link(rel="icon" href="common/img/favicon.ico")
+    link(href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet")
+  
+    link(rel="stylesheet" href="reveal.js-3.6.0/css/reveal.css")
+    link(rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css")
+    link(rel="stylesheet" href="common/css/common.css")
+    link(rel="stylesheet" href="custom.css")
 
- 
-    link(href='reveal.js-3.3.0/css/reveal.css', rel='stylesheet')
-    link(href='reveal.js-3.3.0/css/theme/black.css', rel='stylesheet')
-    link(href='common/css/common.css', rel='stylesheet')
-    link(href='style.css', rel='stylesheet')
+
     <!-- Theme used for syntax highlighting of code -->
-    link(href='reveal.js-3.3.0/lib/css/zenburn.css', rel='stylesheet')
+    link(rel="stylesheet" href="reveal.js-3.6.0/lib/css/zenburn.css")
     //- Printing and PDF exports -->
     script.
       var link = document.createElement( 'link' );
@@ -25,7 +28,7 @@ html
     
    
  
-
+-var counter = 0
   body
     .reveal
       .slides        
@@ -71,8 +74,8 @@ html
         include ./slides/extras/extras.pug
                 
      
-    script(src='reveal.js-3.3.0/lib/js/head.min.js')
-    script(src='reveal.js-3.3.0/js/reveal.js')
+      script(src='reveal.js-3.6.0/lib/js/head.min.js')
+    script(src='reveal.js-3.6.0/js/reveal.js')
 
     script.
       Reveal.initialize({
@@ -86,24 +89,18 @@ html
         //- height: 1.0,
         dependencies: [
           // Syntax highlight for <code> elements
-            {src: 'reveal.js-3.3.0/plugin/markdown/marked.js'},
-            {src: 'reveal.js-3.3.0/plugin/markdown/markdown.js'},
-            {src: 'reveal.js-3.3.0/plugin/notes/notes.js', async: true},
-            { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },         
+           {
+                src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() {
+                    return !document.body.classList;
+                }
+            },
+            {
+                src: 'reveal.js-3.6.0/plugin/highlight/highlight.js', async: true, callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            },
+            {src: 'reveal.js-3.6.0/plugin/search/search.js', async: true},
+            {src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true},
+            {src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true}      
         ]
       });
-      Reveal.addEventListener( 'jsbin', function() {
-            var iframes  = document.querySelectorAll(".present iframe"),  
-            iframeSrc = iframes[0].data("src");
-            iframes[0].attr("src",iframeSrc);
-
-
-            setTimeout(function(){                
-                iframeSrc = iframes[1].data("src");
-                iframes[1].attr("src",iframeSrc);
-            }, 2000);
-
-            
-      }, false );
-     
-

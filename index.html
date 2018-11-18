@@ -6,11 +6,13 @@
     <meta name="author" content=" Marek Matczak, Janusz Rygał, Paweł Kamiński, Bartek Pietrowski, Tomek Szewców">
     <meta name="description" content="RWC Traning">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-    <link href="reveal.js-3.3.0/css/reveal.css" rel="stylesheet">
-    <link href="reveal.js-3.3.0/css/theme/black.css" rel="stylesheet">
-    <link href="common/css/common.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet"><!-- Theme used for syntax highlighting of code -->
-    <link href="reveal.js-3.3.0/lib/css/zenburn.css" rel="stylesheet">
+    <link rel="icon" href="common/img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="reveal.js-3.6.0/css/reveal.css">
+    <link rel="stylesheet" href="reveal.js-3.6.0/css/theme/white.css">
+    <link rel="stylesheet" href="common/css/common.css">
+    <link rel="stylesheet" href="custom.css"><!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="reveal.js-3.6.0/lib/css/zenburn.css">
     <script>
       var link = document.createElement( 'link' );
       link.rel = 'stylesheet';
@@ -20,52 +22,52 @@
       
       
       
-      
     </script>
   </head>
-  <body>
-    <div class="reveal">
-      <div class="slides">       
-        <section id="title" data-transition="slide" data-state="normal">
-          <h2>Around 120 minutes with CSS</h2>
-          <body><img class="logo" src="img/css-logo.png"></body>
-        </section>
-        <section id="agenda" data-transition="slide" data-state="normal">
-          <h2>Agenda</h2>
-          <body>
-            <table> 
-              <tr>
-                <td class="fragment">
-                  <ul>
-                    <li>syntax</li>
-                    <li>selectors</li>
-                    <li>properties</li>
-                    <li>selectors priority                        </li>
-                  </ul>
-                </td>
-                <td class="fragment">
-                  <ul>                       
-                    <li>box model</li>
-                    <li>float        </li>
-                    <li>positioning        </li>
-                    <li>flex<br></li>
-                  </ul>
-                </td>
-                <td class="fragment">
-                  <ul>                     
-                    <li>more to learn</li>
-                    <li>more to read</li>
-                    <li>extras<br><br></li>
-                  </ul>
-                </td>
-              </tr>
-            </table>
-          </body>
-        </section>
-        <section id="syntax01" data-transition="slide none" data-state="normal">
-          <h2>syntax</h2>
-          <body>
-            <pre><code css data-trim>&lt;selector1&gt;, &lt;selector2&gt; {
+</html>
+<body>
+  <div class="reveal">
+    <div class="slides">       
+      <section id="title-0" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Around 120 minutes with CSS</h2>
+        <body class="white"><img class="logo" src="img/css-logo.png"></body>
+      </section>
+      <section id="agenda-1" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Agenda</h2>
+        <body class="white">
+          <table> 
+            <tr>
+              <td class="fragment">
+                <ul>
+                  <li>syntax</li>
+                  <li>selectors</li>
+                  <li>properties</li>
+                  <li>selectors priority                        </li>
+                </ul>
+              </td>
+              <td class="fragment">
+                <ul>                       
+                  <li>box model</li>
+                  <li>float        </li>
+                  <li>positioning        </li>
+                  <li>flex<br></li>
+                </ul>
+              </td>
+              <td class="fragment">
+                <ul>                     
+                  <li>more to learn</li>
+                  <li>more to read</li>
+                  <li>extras<br><br></li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        </body>
+      </section>
+      <section id="syntax01-2" data-transition="slide none" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">syntax</h2>
+        <body class="white">
+          <pre><code css data-trim>&lt;selector1&gt;, &lt;selector2&gt; {
   &lt;property1&gt; : &lt;value1&gt;;
   &lt;property2&gt; : &lt;value2&gt;;
   &lt;property3&gt; : &lt;value3&gt;
@@ -76,12 +78,12 @@
 }
 &nbsp;
 /* Css comment */</code></pre>
-          </body>
-        </section>
-        <section id="syntax02" data-transition="none" data-state="normal">
-          <h2>syntax</h2>
-          <body>
-            <pre><code css data-trim>p, div {
+        </body>
+      </section>
+      <section id="syntax02-3" data-transition="none" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">syntax</h2>
+        <body class="white">
+          <pre><code css data-trim>p, div {
   background: red;
   font-weight: bold;
   color: blue
@@ -92,428 +94,422 @@ p {
 }
 &nbsp;
 /* Css comment */</code></pre>
-          </body>
-        </section>
-        <section id="selectors01" data-transition="slide" data-state="normal">
-          <h2>selectors</h2>
-          <body>
-            <table>
-              <thead>
-                <tr></tr>
-                <th>Selector</th>
-                <th>Selected element(s)</th>
-              </thead>
-              <tbody>
-                <tr></tr>
-                <td class="code">p</td>
-                <td>Paragraphs</td>
-                <tr></tr>
-                <td class="code">.class1</td>
-                <td>Elements with <i>class1</i></td>
-                <tr></tr>
-                <td class="code">#content</td>
-                <td>Element with identifier <i>content</i></td>
-                <tr></tr>
-                <td class="code">p.class1</td>
-                <td>Paragaphs with class <i>class1</i></td>
-                <tr></tr>
-                <td class="code">p .class1</td>
-                <td>Elements with class <i>class1</i> having paragraph parent</td>
-                <tr></tr>
-                <td class="code">.class1 .class2</td>
-                <td>Elements with class <i>class2</i> having parent with class <i>class1</i></td>
-                <tr></tr>
-                <td class="code">p.class1.class2</td>
-                <td>Paragraphs with both <i>class1</i> and <i>class2</i> classes</td>
-              </tbody>
-            </table>
-          </body>
-        </section>
-        <section id="selectors02" data-transition="slide" data-state="normal">
-          <h2>selectors</h2>
-          <body>
-            <table>
-              <thead>
-                <tr></tr>
-                <th style="width: 250px;">Selector</th>
-                <th>Selected element(s)</th>
-              </thead>
-              <tbody>
-                <tr></tr>
-                <td class="code">*</td>
-                <td>All elements</td>
-                <tr></tr>
-                <td class="code">div &gt; p</td>
-                <td>All &lt;p&gt; elements where the direct parent is a &lt;div&gt; element</td>
-                <tr></tr>
-                <td class="code">div + p</td>
-                <td>All &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements</td>
-                <tr></tr>
-                <td class="code">p:first-child</td>
-                <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
-                <tr></tr>
-                <td class="code">p::first-line</td>
-                <td>Selects first line od every &lt;p&gt; element</td>
-              </tbody>
-            </table>
-            <ul>
-              <li class="nobullet"><a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">  Selectors </a></li>
-              <li class="nobullet"><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">  Pseudo Classes</a></li>
-              <li class="nobullet"><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">  Pseudo Elements</a></li>
-            </ul>
-          </body>
-        </section>
-        <section id="properties01" data-transition="slide" data-state="normal">
-          <h2>properties</h2>
-          <body>
-            <table>
-              <thead>
-                <tr></tr>
-                <th>Properties</th>
+        </body>
+      </section>
+      <section id="selectors01-4" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">selectors</h2>
+        <body class="white">
+          <table>
+            <thead>
+              <tr></tr>
+              <th>Selector</th>
+              <th>Selected element(s)</th>
+            </thead>
+            <tbody>
+              <tr></tr>
+              <td class="code">p</td>
+              <td>Paragraphs</td>
+              <tr></tr>
+              <td class="code">.class1</td>
+              <td>Elements with <i>class1</i></td>
+              <tr></tr>
+              <td class="code">#content</td>
+              <td>Element with identifier <i>content</i></td>
+              <tr></tr>
+              <td class="code">p.class1</td>
+              <td>Paragaphs with class <i>class1</i></td>
+              <tr></tr>
+              <td class="code">p .class1</td>
+              <td>Elements with class <i>class1</i> having paragraph parent</td>
+              <tr></tr>
+              <td class="code">.class1 .class2</td>
+              <td>Elements with class <i>class2</i> having parent with class <i>class1</i></td>
+              <tr></tr>
+              <td class="code">p.class1.class2</td>
+              <td>Paragraphs with both <i>class1</i> and <i>class2</i> classes</td>
+            </tbody>
+          </table>
+        </body>
+      </section>
+      <section id="selectors02-5" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">selectors</h2>
+        <body class="white">
+          <table>
+            <thead>
+              <tr></tr>
+              <th style="width: 250px;">Selector</th>
+              <th>Selected element(s)</th>
+            </thead>
+            <tbody>
+              <tr></tr>
+              <td class="code">*</td>
+              <td>All elements</td>
+              <tr></tr>
+              <td class="code">div &gt; p</td>
+              <td>All &lt;p&gt; elements where the direct parent is a &lt;div&gt; element</td>
+              <tr></tr>
+              <td class="code">div + p</td>
+              <td>All &lt;p&gt; elements that are placed immediately after &lt;div&gt; elements</td>
+              <tr></tr>
+              <td class="code">p:first-child</td>
+              <td>Selects every &lt;p&gt; element that is the first child of its parent</td>
+              <tr></tr>
+              <td class="code">p::first-line</td>
+              <td>Selects first line od every &lt;p&gt; element</td>
+            </tbody>
+          </table>
+          <ul>
+            <li class="nobullet"><a href="http://www.w3schools.com/cssref/css_selectors.asp" target="_blank">  Selectors </a></li>
+            <li class="nobullet"><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">  Pseudo Classes</a></li>
+            <li class="nobullet"><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">  Pseudo Elements</a></li>
+          </ul>
+        </body>
+      </section>
+      <section id="properties01-6" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">properties</h2>
+        <body class="white">
+          <table>
+            <thead>
+              <tr></tr>
+              <th>Properties</th>
+              <th>Example values</th>
+            </thead>
+            <tbody>
+              <tr></tr>
+              <td class="code">animation</td>
+              <td>mymove 5s infinite</td>
+              <tr></tr>
+              <td class="code">width</td>
+              <td>500px</td>
+              <tr></tr>
+              <td class="code">margin/padding</td>
+              <td>5px 0 5px 0</td>
+              <tr></tr>
+              <td class="code">line-height</td>
+              <td>1.4em</td>
+              <tr></tr>
+              <td class="code">font-weight</td>
+              <td>bolder</td>
+              <tr></tr>
+              <td class="code">color</td>
+              <td>rgba(12,34,56,0.6)</td>
+              <tr></tr>
+              <td class="code">left</td>
+              <td>-25px</td>
+              <tr></tr>
+              <td class="code">visiblility</td>
+              <td>false</td>
+            </tbody>
+          </table>
+        </body>
+      </section>
+      <section id="properties02-7" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">properties</h2>
+        <body class="white">
+          <table>
+            <thead>
+              <tr></tr>
+              <th>Properties
                 <th>Example values</th>
-              </thead>
-              <tbody>
-                <tr></tr>
-                <td class="code">animation</td>
-                <td>mymove 5s infinite</td>
-                <tr></tr>
-                <td class="code">width</td>
-                <td>500px</td>
-                <tr></tr>
-                <td class="code">margin/padding</td>
-                <td>5px 0 5px 0</td>
-                <tr></tr>
-                <td class="code">line-height</td>
-                <td>1.4em</td>
-                <tr></tr>
-                <td class="code">font-weight</td>
-                <td>bolder</td>
-                <tr></tr>
-                <td class="code">color</td>
-                <td>rgba(12,34,56,0.6)</td>
-                <tr></tr>
-                <td class="code">left</td>
-                <td>-25px</td>
-                <tr></tr>
-                <td class="code">visiblility</td>
-                <td>false</td>
-              </tbody>
-            </table>
-          </body>
-        </section>
-        <section id="properties02" data-transition="slide" data-state="normal">
-          <h2>properties</h2>
-          <body>
-            <table>
-              <thead>
-                <tr></tr>
-                <th>Properties
-                  <th>Example values</th>
-                </th>
-              </thead>
-              <tbody>
-                <tr></tr>
-                <td class="code">-webkit-transform</td>
-                <td> rotate(7deg)</td>
-                <tr></tr>
-                <td class="code">overflow-x</td>
-                <td>hidden</td>
-                <tr></tr>
-                <td class="code">list-style-image</td>
-                <td>url('sqpurple.gif');</td>
-                <tr></tr>
-                <td class="code">visiblility</td>
-                <td>false</td>
-                <tr></tr>
-                <td class="code">cursor</td>
-                <td>pointer</td>
-                <tr></tr>
-                <td class="code">z-index</td>
-                <td>-99</td>
-              </tbody>
-            </table>
-            <p><a href="http://www.w3schools.com/cssref" target="_blank">  W3C properites</a></p>
-          </body>
-        </section>
-        <section id="demo01" data-transition="slide" data-state="normal">
-          <h2>Demo Syntax</h2>
-          <body><a href="http://scratchpad.io/ethereal-passenger-6873" target="_blank">Demo</a></body>
-        </section>
-        <section id="exercise1" data-transition="slide" data-state="jsbin">
-          <h2><a href="http://jsbin.com/meqidem/1/edit?html,css" target="_blank">Exercise 1</a></h2>
-          <body><a href="http://jsbin.com/sefufos/2/edit?output" target="_blank"><img class="logo" src="img/excercise1.png"></a></body>
-        </section>
-        <section id="exercise2" data-transition="slide" data-state="jsbin">
-          <h2><a href="http://jsbin.com/bipaqe/1/edit?html,css" target="_blank">Exercise 2</a></h2>
-          <body><a href="http://jsbin.com/rewihig/2/edit?output" target="_blank"><img class="logo" src="img/excercise2.png"></a></body>
-        </section>
-        <section id="priority01" data-transition="slide" data-state="normal">
-          <h2>Applying styles </h2>
-          <body>
-            <pre><code css data-trim> //external script             
+              </th>
+            </thead>
+            <tbody>
+              <tr></tr>
+              <td class="code">-webkit-transform</td>
+              <td> rotate(7deg)</td>
+              <tr></tr>
+              <td class="code">overflow-x</td>
+              <td>hidden</td>
+              <tr></tr>
+              <td class="code">list-style-image</td>
+              <td>url('sqpurple.gif');</td>
+              <tr></tr>
+              <td class="code">visiblility</td>
+              <td>false</td>
+              <tr></tr>
+              <td class="code">cursor</td>
+              <td>pointer</td>
+              <tr></tr>
+              <td class="code">z-index</td>
+              <td>-99</td>
+            </tbody>
+          </table>
+          <p><a href="http://www.w3schools.com/cssref" target="_blank">  W3C properites</a></p>
+        </body>
+      </section>
+      <section id="demo01-8" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Syntax</h2>
+        <body class="white"><a href="http://scratchpad.io/ethereal-passenger-6873" target="_blank">Demo</a></body>
+      </section>
+      <section id="exercise1-9" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white"><a href="http://jsbin.com/meqidem/1/edit?html,css" target="_blank">Exercise 1</a></h2>
+        <body class="white"><a href="http://jsbin.com/sefufos/2/edit?output" target="_blank"><img class="logo" src="img/excercise1.png"></a></body>
+      </section>
+      <section id="exercise2-10" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white"><a href="http://jsbin.com/bipaqe/1/edit?html,css" target="_blank">Exercise 2</a></h2>
+        <body class="white"><a href="http://jsbin.com/rewihig/2/edit?output" target="_blank"><img class="logo" src="img/excercise2.png"></a></body>
+      </section>
+      <section id="priority01-11" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Applying styles </h2>
+        <body class="white">
+          <pre><code css data-trim> //external script             
 <link href="style.css" rel="stylesheet"></code></pre>
-            <pre><code css>//style tag     
+          <pre><code css>//style tag     
  &lt;style&gt;
   p{
    font-size:25px;
    font-family:tahoma;                  
   }
 &lt;/style&gt;         </code></pre>
-            <pre><code> //inline styles
+          <pre><code> //inline styles
  &lt;p  style="font-size:12px"  &gt; </code></pre>
-          </body>
-        </section>
-        <section id="priority02" data-transition="slide" data-state="normal">
-          <h2>priority (S-I-C-E)</h2>
-          <body>
-            <table>
-              <tbody>
-                <tr></tr>
-                <td class="bold">Source</td>
-                <td>2 - Inline <br> 1 - <span style="color:#71e9f4">&lt;style&gt;&lt;/style&gt;</span> tag <br> 0 - External file</td>
-                <tr></tr>
-                <td class="bold">Ids</td>
-                <td>Number of identifiers in selector</td>
-                <tr></tr>
-                <td class="bold">Classes</td>
-                <td>Number of classes in selector</td>
-                <tr></tr>
-                <td class="bold">Elements</td>
-                <td>Number of elements in selector</td>
-              </tbody>
-            </table>
-          </body>
-        </section>
-        <section id="demo02" data-transition="slide" data-state="normal">
-          <h2>Demo Priority</h2>
-          <body><a href="http://scratchpad.io/relieved-magic-890" target="_blank">Demo</a></body>
-        </section>
-        <section id="box" data-transition="slide" data-state="normal">
-          <h2>Box model</h2>
-          <body><img class="zoomable center" src="img/box.gif">
-            <p><strong>real-size = margin + border + padding + size</strong></p>
-          </body>
-        </section>
-        <section id="demobox" data-transition="slide" data-state="normal">
-          <h2>Demo Box model</h2>
-          <body><a href="http://scratchpad.io/tasteful-selection-1102" target="_blank">Demo</a></body>
-        </section>
-        <section id="blockvsinline01" data-transition="slide" data-state="normal">
-          <h2>block vs inline</h2>
-          <body>
-            <h3>display: block</h3>
-            <ul>            
-              <li>displayed under each other</li>
-              <li>size defined by width, height, margin, padding</li>
-              <li>example: &lt;div&gt;, &lt;section&gt;, &lt;p&gt;                                   </li>
-            </ul>
-          </body>
-        </section>
-        <section id="blockvsinline02" data-transition="slide" data-state="normal">
-          <h2>block vs inline</h2>
-          <body>
-            <h3>display: inline</h3>
-            <ul>            
-              <li>displayed next to each other</li>
-              <li>size defined only by content size and margin-left, margin-right, padding-left, padding-right</li>
-              <li>example: &lt;a&gt;, &lt;span&gt;  </li>
-            </ul>
-          </body>
-        </section>
-        <section id="blockvsinline03" data-transition="slide" data-state="normal">
-          <h2>block vs inline</h2>
-          <body>
-            <h3>display: inline-block</h3>
-            <ul>            
-              <li>displayed next to each other</li>
-              <li>size defined by width, height, margin, padding</li>
-              <li>set by css style only</li>
-            </ul>
-          </body>
-        </section>
-        <section id="demo03" data-transition="slide" data-state="normal">
-          <h2>Demo Block vs inline </h2>
-          <body><a href="http://scratchpad.io/cute-girl-6528" target="_blank">Demo</a></body>
-        </section>
-        <section id="float01" data-transition="slide" data-state="normal">
-          <h2>Float</h2>
-          <body>
-            <ul>
-              <li>element can be pushed to the <b class="blue">left</b> or <b class="blue">right</b>,</li>
-              <li>elements are floated <b class="blue">horizontally</b></li>
-              <li>elements after the floating element will flow around it</li>
-            </ul>
-          </body>
-        </section>
-        <section id="demo04" data-transition="slide" data-state="normal">
-          <h2>Demo Float</h2>
-          <body><a href="http://scratchpad.io/volatile-army-7723" target="_blank">Demo</a></body>
-        </section>
-        <section id="exercise3" data-transition="slide" data-state="jsbin">
-          <h2><a href="http://jsbin.com/jaxobe/1/edit?html,css" target="_blank">Exercise 3</a></h2>
-          <body><a href="http://jsbin.com/pakisa/2/edit?output" target="_blank"><img class="logo" src="img/excercise3.png"></a></body>
-        </section>
-        <section id="positioning01" data-transition="slide" data-state="normal">
-          <h2>Position:static</h2>
-          <body>
-            <ul>
-              <li>default value</li>
-              <li>positioned according to the normal flow</li>
-            </ul>
-          </body>
-        </section>
-        <section id="positioning02" data-transition="slide" data-state="normal">
-          <h2>Position:relative</h2>
-          <body>
-            <ul>
-              <li>element is positioned <b>relative to its normal position</b></li>
-              <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
-              <li>even if moved consumes space in container</li>
-            </ul>
-          </body>
-        </section>
-        <section id="positioning03" data-transition="slide" data-state="normal">
-          <h2> Position:absolute</h2>
-          <body>
-            <ul>
-              <li>element is positioned <b>relative to its first positioned (not static) ancestor element</b></li>
-              <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
-              <li>offten used together with <b>relative</b> positioning</li>
-            </ul>
-          </body>
-        </section>
-        <section id="positioning04" data-transition="slide" data-state="normal">
-          <h2>Position: fixed</h2>
-          <body>
-            <ul>
-              <li>element is positioned <b>relative to the browser window</b></li>
-              <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
-            </ul>
-          </body>
-        </section>
-        <section id="demo05" data-transition="slide" data-state="normal">
-          <h2>Demo Positioniong</h2>
-          <body><a href="http://scratchpad.io/enormous-toes-6101" target="_blank">Demo</a></body>
-        </section>
-        <section id="exercise4" data-transition="slide" data-state="jsbin">
-          <h2><a href="http://jsbin.com/gemovi/1/edit?html,css" target="_blank">Exercise 4</a></h2>
-          <body><a href="http://jsbin.com/jafuzo/2/edit?output" target="_blank"><img class="logo" src="img/excercise4.png"></a></body>
-        </section>
-        <section id="flexbox" data-transition="slide" data-state="normal">
-          <h2>Flexbox</h2>
-          <body>
-            <ul>
-              <li>a new layout mode in CSS3</li>
-              <li>
-                 make layout component easier</li>
-              <li>
-                 optimal use of avaiable space</li>
-              <li>
-                 designed to style components not whole pages</li>
-              <li>responsive and mobile friendly</li>
-              <li> <a href="http://flexboxfroggy.com/" target="_blank">
-                   Playground for learining Flex</a></li>
-              <li> <a href="http://cssgridgarden.com/" target="_blank">
-                    Playground for learning CSS Grid    </a></li>
-            </ul>
-          </body>
-        </section>
-        <!-- include ./slides/positioning/demo06.pug       -->
-        <!-- include ./slides/grid.pug                  -->
-        <!-- include ./slides/extras/less.pug-->
-        <!-- include ./slides/extras/sass.pug-->
-        <!-- include ./slides/extras/programming.pug-->
-        <section id="moretolearn" data-transition="slide" data-state="normal">
-          <h2>what we have missed</h2>
-          <body>
-            <ul> 
-              <li class="fragment">sass / less (preprocessors)</li>
-              <li class="fragment">media queries</li>
-              <li class="fragment">CSS - programming language?</li>
-              <li class="fragment">bootstrap, google material</li>
-              <li class="fragment">css animation</li>
-            </ul>
-          </body>
-        </section>
-        <section id="more01" data-transition="slide" data-state="normal">
-          <h2>Websites</h2>
-          <body>
-            <ul>
-              <li><a href="http://www.w3schools.com" target="_blank">W3C Schools</a></li>
-              <li><a href="http://www.htmldog.com/" target="_blank">HTML Dog</a></li>
-              <li><a href="http://www.html5rocks.com/" target="_blank">HTML 5 Rocks</a></li>
-              <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
-              <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
-            </ul>
-          </body>
-        </section>
-        <section id="more02" data-transition="slide" data-state="normal">
-          <h2>People</h2>
-          <body>
-            <ul>
-              <li><a href="http://meyerweb.com/" target="_blank">Eric Mayer</a></li>
-              <li><a href="http://lea.verou.me/" target="_blank">Lea Veru</a></li>
-              <li><a href="https://css-tricks.com/" target="_blank">Chris Coyier       </a></li>
-            </ul>
-          </body>
-        </section>
-        <section id="more02" data-transition="slide" data-state="normal">
-          <h2>Watch Conferences</h2>
-          <body>
-            <ul>
-              <li><a href="https://2017.front-trends.com/" target="_blank">Front Trends</a><a href="https://vimeo.com/fronttrends/videos/page:1/sort:date" target="_blank">(@Vimeo)</a></li>
-              <li><a href="http://2016.cssconf.com/" target="_blank">CSS Conf</a></li>
-              <li><a href="http://2017.cssconf.eu/" target="_blank">CSS Conf Europe</a></li>
-            </ul>
-          </body>
-        </section>
-        <section id="extras" data-transition="slide" data-state="normal">
-          <h2>extras</h2>
-          <body>
-            <ul>
-              <li><a href="http://www.csszengarden.com/" target="_blank">CSS Zen Garden</a></li>
-              <li><a href="http://codepen.io/pixelass/pen/YXXBmr" target="_blank">Octopus</a></li>
-              <li><a href="http://codepen.io/tameraydin/pen/CADvB" target="_blank">CSS Cube</a></li>
-              <li><a href="http://codepen.io/thebabydino/pen/qDziw" target="_blank">CSS Complex Animation</a></li>
-              <li><a href="https://codepen.io/ziga-miklic/pen/Fagmh" target="_blank">Tic Tac Toe</a></li>
-            </ul>
-          </body>
-        </section>
-      </div>
+        </body>
+      </section>
+      <section id="priority02-12" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">priority (S-I-C-E)</h2>
+        <body class="white">
+          <table>
+            <tbody>
+              <tr></tr>
+              <td class="bold">Inline Style:</td>
+              <td>S = 1 – (1,0,0,0)</td>
+              <tr></tr>
+              <td class="bold">Ids</td>
+              <td>I =  1 – (0,1,0,0)</td>
+              <tr></tr>
+              <td class="bold">Class, Pseudo class, Attribute:</td>
+              <td>C = 1 – (0,0,1,0)</td>
+              <tr></tr>
+              <td class="bold"> Element, Pseudo Element:</td>
+              <td>E = 1 – (0,0,0,1)</td>
+            </tbody>
+          </table>
+        </body>
+      </section>
+      <section id="demo02-13" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Priority</h2>
+        <body class="white"><a href="http://scratchpad.io/relieved-magic-890" target="_blank">Demo</a></body>
+      </section>
+      <section id="box-14" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Box model</h2>
+        <body class="white"><img class="zoomable center" src="img/box.gif">
+          <p><strong>real-size = margin + border + padding + size</strong></p>
+        </body>
+      </section>
+      <section id="demobox-15" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Box model</h2>
+        <body class="white"><a href="http://scratchpad.io/tasteful-selection-1102" target="_blank">Demo</a></body>
+      </section>
+      <section id="blockvsinline01-16" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">block vs inline</h2>
+        <body class="white">
+          <h3>display: block</h3>
+          <ul>            
+            <li>displayed under each other</li>
+            <li>size defined by width, height, margin, padding</li>
+            <li>example: &lt;div&gt;, &lt;section&gt;, &lt;p&gt;                                   </li>
+          </ul>
+        </body>
+      </section>
+      <section id="blockvsinline02-17" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">block vs inline</h2>
+        <body class="white">
+          <h3>display: inline</h3>
+          <ul>            
+            <li>displayed next to each other</li>
+            <li>size defined only by content size and margin-left, margin-right, padding-left, padding-right</li>
+            <li>example: &lt;a&gt;, &lt;span&gt;  </li>
+          </ul>
+        </body>
+      </section>
+      <section id="blockvsinline03-18" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">block vs inline</h2>
+        <body class="white">
+          <h3>display: inline-block</h3>
+          <ul>            
+            <li>displayed next to each other</li>
+            <li>size defined by width, height, margin, padding</li>
+            <li>set by css style only</li>
+          </ul>
+        </body>
+      </section>
+      <section id="demo03-19" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Block vs inline </h2>
+        <body class="white"><a href="http://scratchpad.io/cute-girl-6528" target="_blank">Demo</a></body>
+      </section>
+      <section id="float01-20" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Float</h2>
+        <body class="white">
+          <ul>
+            <li>element can be pushed to the <b class="blue">left</b> or <b class="blue">right</b>,</li>
+            <li>elements are floated <b class="blue">horizontally</b></li>
+            <li>elements after the floating element will flow around it</li>
+          </ul>
+        </body>
+      </section>
+      <section id="demo04-21" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Float</h2>
+        <body class="white"><a href="http://scratchpad.io/volatile-army-7723" target="_blank">Demo</a></body>
+      </section>
+      <section id="exercise3-22" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white"><a href="http://jsbin.com/jaxobe/1/edit?html,css" target="_blank">Exercise 3</a></h2>
+        <body class="white"><a href="http://jsbin.com/pakisa/2/edit?output" target="_blank"><img class="logo" src="img/excercise3.png"></a></body>
+      </section>
+      <section id="positioning01-23" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Position:static</h2>
+        <body class="white">
+          <ul>
+            <li>default value</li>
+            <li>positioned according to the normal flow</li>
+          </ul>
+        </body>
+      </section>
+      <section id="positioning02-24" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Position:relative</h2>
+        <body class="white">
+          <ul>
+            <li>element is positioned <b>relative to its normal position</b></li>
+            <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
+            <li>even if moved consumes space in container</li>
+          </ul>
+        </body>
+      </section>
+      <section id="positioning03-25" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white"> Position:absolute</h2>
+        <body class="white">
+          <ul>
+            <li>element is positioned <b>relative to its first positioned (not static) ancestor element</b></li>
+            <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
+            <li>offten used together with <b>relative</b> positioning</li>
+          </ul>
+        </body>
+      </section>
+      <section id="positioning04-26" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Position: fixed</h2>
+        <body class="white">
+          <ul>
+            <li>element is positioned <b>relative to the browser window</b></li>
+            <li>position can be adjusted with <i>top, bottom, left, right</i> properties</li>
+          </ul>
+        </body>
+      </section>
+      <section id="demo05-27" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Demo Positioniong</h2>
+        <body class="white"><a href="http://scratchpad.io/enormous-toes-6101" target="_blank">Demo</a></body>
+      </section>
+      <section id="exercise4-28" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_2_SVG/Fixed_Shape_2_CapgeminiBlue_RGB.svg">
+        <h2 class="white"><a href="http://jsbin.com/gemovi/1/edit?html,css" target="_blank">Exercise 4</a></h2>
+        <body class="white"><a href="http://jsbin.com/jafuzo/2/edit?output" target="_blank"><img class="logo" src="img/excercise4.png"></a></body>
+      </section>
+      <section id="flexbox-29" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Flexbox</h2>
+        <body class="white">
+          <ul>
+            <li>a new layout mode in CSS3</li>
+            <li>
+               make layout component easier</li>
+            <li>
+               optimal use of avaiable space</li>
+            <li>
+               designed to style components not whole pages</li>
+            <li>responsive and mobile friendly</li>
+            <li> <a href="http://flexboxfroggy.com/" target="_blank">
+                 Playground for learining Flex</a></li>
+            <li> <a href="http://cssgridgarden.com/" target="_blank">
+                  Playground for learning CSS Grid    </a></li>
+          </ul>
+        </body>
+      </section>
+      <!-- include ./slides/positioning/demo06.pug       -->
+      <!-- include ./slides/grid.pug                  -->
+      <!-- include ./slides/extras/less.pug-->
+      <!-- include ./slides/extras/sass.pug-->
+      <!-- include ./slides/extras/programming.pug-->
+      <section id="moretolearn-30" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">what we have missed</h2>
+        <body class="white">
+          <ul> 
+            <li class="fragment">sass / less (preprocessors)</li>
+            <li class="fragment">media queries</li>
+            <li class="fragment">CSS - programming language?</li>
+            <li class="fragment">bootstrap, google material</li>
+            <li class="fragment">css animation</li>
+          </ul>
+        </body>
+      </section>
+      <section id="more01-31" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Websites</h2>
+        <body class="white">
+          <ul>
+            <li><a href="http://www.w3schools.com" target="_blank">W3C Schools</a></li>
+            <li><a href="http://www.htmldog.com/" target="_blank">HTML Dog</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+            <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+          </ul>
+        </body>
+      </section>
+      <section id="more02-32" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">People</h2>
+        <body class="white">
+          <ul>
+            <li><a href="http://meyerweb.com/" target="_blank">Eric Mayer</a></li>
+            <li><a href="http://lea.verou.me/" target="_blank">Lea Veru</a></li>
+            <li><a href="https://css-tricks.com/" target="_blank">Chris Coyier       </a></li>
+          </ul>
+        </body>
+      </section>
+      <section id="more02-33" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">Watch Conferences</h2>
+        <body class="white">
+          <ul>
+            <li><a href="https://2018.front-trends.com/" target="_blank">Front Trends</a><a href="https://vimeo.com/fronttrends/videos/page:1/sort:date" target="_blank">(@Vimeo)</a></li>
+            <li><a href="http://2016.cssconf.com/" target="_blank">CSS Conf</a></li>
+            <li><a href="http://2018.cssconf.eu/" target="_blank">CSS Conf Europe</a></li>
+          </ul>
+        </body>
+      </section>
+      <section id="extras-34" data-transition="slide" data-background-image="common/img/shapes/Fixed_Shape_3_SVG/Fixed_Shape_3_CapgeminiBlue_RGB.svg">
+        <h2 class="white">extras</h2>
+        <body class="white">
+          <ul>
+            <li><a href="http://www.csszengarden.com/" target="_blank">CSS Zen Garden</a></li>
+            <li><a href="https://codepen.io/DanielWeiner/pen/mbueC" target="_blank">Octopus</a></li>
+            <li><a href="http://codepen.io/tameraydin/pen/CADvB" target="_blank">CSS Cube</a></li>
+            <li><a href="https://codepen.io/thebabydino/pen/GNYvbZ" target="_blank">CSS Complex Animation</a></li>
+            <li><a href="https://codepen.io/ziga-miklic/pen/Fagmh" target="_blank">Tic Tac Toe</a></li>
+          </ul>
+        </body>
+      </section>
     </div>
-    <script src="reveal.js-3.3.0/lib/js/head.min.js"></script>
-    <script src="reveal.js-3.3.0/js/reveal.js"></script>
-    <script>
-       Reveal.initialize({
-        // controls: true,
-       //  progress: true,
-         history: true,
-       //  center: true,
-       //  rollingLinks: true,
-      //   transition: "convex",
-         //- width: "90%",
-         //- height: 1.0,
-         dependencies: [
-           // Syntax highlight for <code> elements
-             {src: 'reveal.js-3.3.0/plugin/markdown/marked.js'},
-             {src: 'reveal.js-3.3.0/plugin/markdown/markdown.js'},
-             {src: 'reveal.js-3.3.0/plugin/notes/notes.js', async: true},
-             { src: 'reveal.js-3.3.0/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },         
-         ]
-       });
-       Reveal.addEventListener( 'jsbin', function() {
-             var iframes  = document.querySelectorAll(".present iframe"),  
-             iframeSrc = iframes[0].data("src");
-             iframes[0].attr("src",iframeSrc);
-      
-      
-             setTimeout(function(){                
-                 iframeSrc = iframes[1].data("src");
-                 iframes[1].attr("src",iframeSrc);
-             }, 2000);
-      
-             
-       }, false );
-    </script>
-  </body>
-</html>
+    <script src="reveal.js-3.6.0/lib/js/head.min.js"></script>
+  </div>
+  <script src="reveal.js-3.6.0/js/reveal.js"></script>
+  <script>
+     Reveal.initialize({
+      // controls: true,
+     //  progress: true,
+       history: true,
+     //  center: true,
+     //  rollingLinks: true,
+    //   transition: "convex",
+       //- width: "90%",
+       //- height: 1.0,
+       dependencies: [
+         // Syntax highlight for <code> elements
+          {
+               src: 'reveal.js-3.6.0/lib/js/classList.js', condition: function() {
+                   return !document.body.classList;
+               }
+           },
+           {
+               src: 'reveal.js-3.6.0/plugin/highlight/highlight.js', async: true, callback: function() {
+                   hljs.initHighlightingOnLoad();
+               }
+           },
+           {src: 'reveal.js-3.6.0/plugin/search/search.js', async: true},
+           {src: 'reveal.js-3.6.0/plugin/zoom-js/zoom.js', async: true},
+           {src: 'reveal.js-3.6.0/plugin/notes/notes.js', async: true}      
+       ]
+     });
+  </script>
+</body>
